@@ -1,0 +1,28 @@
+[
+  {
+    "label": "Dashboards",
+    "icon": "pi pi-home",
+    "items": [
+      {
+        "label": "Example Dashboard",
+        "icon": "pi pi-fw pi-home",
+        "routerLink": [
+          "/"
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Examples",
+    "icon": "pi pi-palette",
+    "items": [
+      {
+        "label": "Empty Page",
+        "icon": "pi pi-fw pi-tablet",
+        "routerLink": [
+          "/empty-page"
+        ]
+      }
+    ]
+  }
+]

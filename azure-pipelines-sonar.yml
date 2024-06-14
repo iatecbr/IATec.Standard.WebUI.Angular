@@ -1,0 +1,72 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: none
+
+resources:
+  pipelines:
+    - pipeline: IATec.Standard.WebUI.Angular
+      source: IATec.Standard.WebUI.Angular
+      trigger:
+        branches:
+          include:
+            - main
+
+pool:
+  name: IATec-Builds-Agents-Linux
+  demands: java
+
+steps:
+  - task: NodeTool@0
+    displayName: 'Install Node.js'
+    inputs:
+      versionSpec: '20.x'
+
+  - task: Npm@1
+    displayName: 'Install dependencies'
+    inputs:
+      command: 'install'
+
+  - task: Npm@1
+    displayName: 'Run build'
+    inputs:
+      command: 'custom'
+      customCommand: 'run build'
+
+  - task: Npm@1
+    displayName: 'Run tests'
+    inputs:
+      command: custom
+      workingDir: ''
+      verbose: false
+      customCommand: 'run test-headless'
+    continueOnError: true
+
+  - task: SonarQubePrepare@6
+    displayName: 'Prepare analysis on SonarQube'
+    inputs:
+      SonarQube: 'IATec - 7You'
+      scannerMode: 'CLI'
+      configMode: 'manual'
+      cliProjectKey: 'IATec.Standard.WebUI.Angular'
+      cliProjectName: 'IATec.Standard.WebUI.Angular'
+      cliSources: '.'
+
+  - task: SonarQubeAnalyze@6
+    displayName: 'Run Code Analysis'
+
+  - task: SonarQubePublish@6
+    displayName: 'Publish Quality Gate Result'
+
+  - task: PublishTestResults@2
+    displayName: 'Publish Test Results'
+    inputs:
+      testResultsFiles: '$(Build.SourcesDirectory)/TESTS-*.xml'
+
+  - task: PublishCodeCoverageResults@2
+    displayName: 'Publish code coverage'
+    inputs:
+      codeCoverageTool: Cobertura
+      summaryFileLocation: '$(Build.SourcesDirectory)/coverage/**/*cobertura-coverage.xml'

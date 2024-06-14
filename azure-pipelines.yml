@@ -1,0 +1,50 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+      - main
+      - Release/*
+      - Hotfix/*
+
+pool:
+  name: IATec-Builds-Agents-Linux
+
+variables:
+  - group: nuget-credentials
+
+steps:
+  - task: NodeTool@0
+    displayName: 'Install Node.js'
+    inputs:
+      versionSpec: '20.x'
+
+  - task: Npm@1
+    displayName: Install
+    inputs:
+      command: 'install'
+      workingDir: '$(Build.SourcesDirectory)'
+
+  - task: CmdLine@2
+    displayName: Clear Files
+    inputs:
+      script: |
+        rm "public/environments/environment.js"
+        mv "public/environments/environment.prod.js" "public/environments/environment.js"
+      workingDirectory: '$(Build.SourcesDirectory)'
+
+  - task: Npm@1
+    displayName: Build
+    inputs:
+      command: 'custom'
+      workingDir: '$(Build.SourcesDirectory)'
+      customCommand: 'run build-aws'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: 'dist/iatec.standard.web-ui.angular'
+      ArtifactName: 'files'
+      publishLocation: 'Container'

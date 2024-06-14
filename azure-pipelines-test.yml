@@ -1,0 +1,46 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: none
+
+pool:
+  name: IATec-Builds-Agents-Linux
+
+steps:
+  - task: NodeTool@0
+    displayName: 'Install Node.js'
+    inputs:
+      versionSpec: '20.x'
+
+  - task: Npm@1
+    displayName: 'Install dependencies'
+    inputs:
+      command: 'install'
+
+  - task: Npm@1
+    displayName: 'Run build'
+    inputs:
+      command: 'custom'
+      customCommand: 'run build'
+
+  - task: Npm@1
+    displayName: 'Run tests'
+    inputs:
+      command: custom
+      workingDir: ''
+      verbose: false
+      customCommand: 'run test-headless'
+    continueOnError: true
+
+  - task: PublishTestResults@2
+    displayName: 'Publish Test Results'
+    inputs:
+      testResultsFiles: '$(Build.SourcesDirectory)/TESTS-*.xml'
+
+  - task: PublishCodeCoverageResults@2
+    displayName: 'Publish code coverage'
+    inputs:
+      codeCoverageTool: Cobertura
+      summaryFileLocation: '$(Build.SourcesDirectory)/coverage/**/*cobertura-coverage.xml'
