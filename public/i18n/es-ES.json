@@ -1,0 +1,54 @@
+{
+  "general": {
+    "action": {
+      "add-new": "{{general.singular.add}} {{general.singular.new}}",
+      "cancel": "{{general.singular.cancel}}",
+      "save": "{{general.singular.save}}",
+      "search": "{{general.singular.search}}"
+    },
+    "plural": {
+      "dashboard": "Dashboards"
+    },
+    "singular": {
+      "add": "Agregar",
+      "cancel": "Cancelar",
+      "description": "Descripción",
+      "icon": "Icono",
+      "id": "Código",
+      "new": "Nuevo",
+      "save": "Guardar",
+      "search": "Buscar",
+      "url": "Url"
+    }
+  },
+  "menu": {
+    "dashboard": {
+      "example": {
+        "label": "Ejemplo"
+      },
+      "label": "{{general.plural.dashboard}}"
+    },
+    "example": {
+      "empty": {
+        "label": "Página vacía"
+      },
+      "label": "Ejemplos"
+    }
+  },
+  "module": {
+    "example": {
+      "content": "Esta es la plantilla de página vacía para comenzar a crear hermosas aplicaciones",
+      "title": "Título de página vacía"
+    },
+    "inventory": {
+      "product": {
+        "dashboard": {
+          "breadcrumb": "Gestión de {{general.plural.product}}",
+          "list": {
+            "description": "{{general.singular.description}}"
+          }
+        }
+      }
+    }
+  }
+}

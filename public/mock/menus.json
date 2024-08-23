@@ -1,10 +1,10 @@
 [
   {
-    "label": "Dashboards",
+    "label": "menu.dashboard.label",
     "icon": "pi pi-home",
     "items": [
       {
-        "label": "Example Dashboard",
+        "label": "menu.dashboard.example.label",
         "icon": "pi pi-fw pi-home",
         "routerLink": [
           "/"
@@ -13,14 +13,14 @@
     ]
   },
   {
-    "label": "Examples",
+    "label": "menu.example.label",
     "icon": "pi pi-palette",
     "items": [
       {
-        "label": "Empty Page",
+        "label": "menu.example.empty.label",
         "icon": "pi pi-fw pi-tablet",
         "routerLink": [
-          "/empty-page"
+          "/example"
         ]
       }
     ]

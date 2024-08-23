@@ -1,0 +1,54 @@
+{
+  "general": {
+    "action": {
+      "add-new": "{{general.singular.add}} {{general.singular.new}}",
+      "cancel": "{{general.singular.cancel}}",
+      "save": "{{general.singular.save}}",
+      "search": "{{general.singular.search}}"
+    },
+    "plural": {
+      "dashboard": "Dashboards"
+    },
+    "singular": {
+      "add": "Adicionar",
+      "cancel": "Cancelar",
+      "description": "Descrição",
+      "icon": "Icone",
+      "id": "Código",
+      "new": "Novo",
+      "save": "Salvar",
+      "search": "Buscar",
+      "url": "Url"
+    }
+  },
+  "menu": {
+    "dashboard": {
+      "example": {
+        "label": "Exemplo"
+      },
+      "label": "{{general.plural.dashboard}}"
+    },
+    "example": {
+      "empty": {
+        "label": "Pagina Vazia"
+      },
+      "label": "Exemplos"
+    }
+  },
+  "module": {
+    "example": {
+      "content": "Este é o seu modelo de página em branco para começar a construir aplicativos lindos",
+      "title": "Titulo da Pagina de Exempl"
+    },
+    "inventory": {
+      "product": {
+        "dashboard": {
+          "breadcrumb": "Gestão de {{general.plural.product}}",
+          "list": {
+            "description": "{{general.singular.description}}"
+          }
+        }
+      }
+    }
+  }
+}

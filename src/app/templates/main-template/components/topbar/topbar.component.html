@@ -1,3 +1,5 @@
 <nph-layout-topbar-language [languages]="languages"
-                            [(selectedLanguage)]="selectedLanguage"/>
-<nph-layout-topbar-user-apps [apps]="apps"/>
+                            [(selectedLanguage)]="selectedLanguage"
+                            (selectedLanguageChange)="afterChangeLanguage($event)"/>
+<nph-layout-topbar-user-apps [apps]="
+                            apps"/>

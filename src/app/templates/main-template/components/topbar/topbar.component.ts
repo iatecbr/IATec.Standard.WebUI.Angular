@@ -2,6 +2,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 import { LanguageModel, MenuService, NephosLayoutModule, UserAppModel } from '@iatec/nephos-layout';
 import { forkJoin } from 'rxjs';
 import { HttpAppService, HttpLanguageService, HttpMenuService } from '../../../../core/services';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
     selector: 'app-main-template-topbar',
@@ -23,6 +24,7 @@ export class TopbarComponent implements OnInit {
         private _menuService: MenuService,
         private _httpMenuService: HttpMenuService,
         private _languageService: HttpLanguageService,
+        private _translateService: TranslocoService,
         private _appsService: HttpAppService
     ) {
     }
@@ -36,9 +38,7 @@ export class TopbarComponent implements OnInit {
             this._httpMenuService.getMenus(),
             this._languageService.getLanguages(),
             this._appsService.getApps()
-        ]).subscribe(([
-                          menus, languages, apps
-                      ]) => {
+        ]).subscribe(([menus, languages, apps]) => {
             this._menuService.menus = menus;
             this.languages = languages;
             this.apps = apps;
@@ -48,11 +48,22 @@ export class TopbarComponent implements OnInit {
     }
 
     private _afterGetLanguages(): void {
-        const lang = localStorage.getItem('lang');
+        const lang = localStorage.getItem('lang') || 'en-US';
 
-        //this._translateService.setAvailableLangs(this.languages.map(x => `${x.code}-${x.country.code}`));
+        this._translateService.setAvailableLangs(this.languages.map(x => `${x.code}-${x.country.code}`));
 
         this.selectedLanguage = this.languages.find(x => x.code === lang?.split('-')[0]
             && x.country.code === lang?.split('-')[1]) || this.languages[0];
+
+        if (this.selectedLanguage) {
+            localStorage.setItem('lang', `${this.selectedLanguage.code}-${this.selectedLanguage.country.code}`);
+        }
+    }
+
+    public afterChangeLanguage(language: LanguageModel | undefined): void {
+        if (language) {
+            localStorage.setItem('lang', `${language.code}-${language.country.code}`);
+            this._translateService.setActiveLang(`${language.code}-${language.country.code}`);
+        }
     }
 }

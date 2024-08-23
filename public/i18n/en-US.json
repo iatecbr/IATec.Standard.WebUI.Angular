@@ -1,0 +1,54 @@
+{
+  "general": {
+    "action": {
+      "add-new": "{{general.singular.add}} {{general.singular.new}}",
+      "cancel": "{{general.singular.cancel}}",
+      "save": "{{general.singular.save}}",
+      "search": "{{general.singular.search}}"
+    },
+    "plural": {
+      "dashboard": "Dashboards"
+    },
+    "singular": {
+      "add": "Add",
+      "cancel": "Cancel",
+      "description": "Description",
+      "icon": "Icon",
+      "id": "Code",
+      "new": "New",
+      "save": "Save",
+      "search": "Search",
+      "url": "Url"
+    }
+  },
+  "menu": {
+    "dashboard": {
+      "example": {
+        "label": "Example"
+      },
+      "label": "{{general.plural.dashboard}}"
+    },
+    "example": {
+      "empty": {
+        "label": "Empty Page"
+      },
+      "label": "Examples"
+    }
+  },
+  "module": {
+    "example": {
+      "content": "This is your empty page template to start building beautiful applications",
+      "title": "Empty Page Title"
+    },
+    "inventory": {
+      "product": {
+        "dashboard": {
+          "breadcrumb": "{{general.plural.product}} Management",
+          "list": {
+            "description": "{{general.singular.description}}"
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,11 +10,13 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                component: DashboardComponent
+                component: DashboardComponent,
+                data: {breadcrumb: 'menu.dashboard.example.label'}
             },
             {
                 path: 'example',
-                component: ExampleComponent
+                component: ExampleComponent,
+                data: {breadcrumb: 'menu.example.empty.label'}
             }
         ]
     }
