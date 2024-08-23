@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './modules/main/dashboard/dashboard.component';
 import { MainTemplateComponent } from './templates/main-template/component/main-template.component';
-import { EmpetyPageComponent } from './modules/main/empety-page/empety-page.component';
+import { ExampleComponent } from './modules/main/example/example.component';
 
 export const routes: Routes = [
     {
@@ -13,8 +13,8 @@ export const routes: Routes = [
                 component: DashboardComponent
             },
             {
-                path: 'empty-page',
-                component: EmpetyPageComponent
+                path: 'example',
+                component: ExampleComponent
             }
         ]
     }
