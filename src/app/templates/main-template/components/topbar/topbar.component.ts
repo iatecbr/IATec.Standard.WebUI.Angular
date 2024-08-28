@@ -2,7 +2,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 import { LanguageModel, MenuService, NephosLayoutModule, UserAppModel } from '@iatec/nephos-layout';
 import { forkJoin } from 'rxjs';
 import { HttpAppService, HttpLanguageService, HttpMenuService } from '../../../../core/services';
-import { TranslocoService } from '@ngneat/transloco';
+import { TranslocoService } from '@jsverse/transloco';
 
 @Component({
     selector: 'app-main-template-topbar',

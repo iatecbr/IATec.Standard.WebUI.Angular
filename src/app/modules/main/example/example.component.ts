@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EmptyPageComponent } from '@iatec/nephos-pages';
-import { TranslocoPipe } from '@ngneat/transloco';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
     selector: 'app-example',
