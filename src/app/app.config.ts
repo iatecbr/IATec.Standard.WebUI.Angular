@@ -6,6 +6,7 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
 import { provideTransloco } from '@jsverse/transloco';
 import { TranslocoHttpLoader } from './core/loaders';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 export const appConfig: ApplicationConfig = {
     providers: [
@@ -21,6 +22,8 @@ export const appConfig: ApplicationConfig = {
                 prodMode: !isDevMode(),
             },
             loader: TranslocoHttpLoader
-        })
+        }),
+        MessageService,
+        ConfirmationService
     ]
 };
