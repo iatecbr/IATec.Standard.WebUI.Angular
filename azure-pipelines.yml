@@ -41,7 +41,7 @@ steps:
   - task: Npm@1
     displayName: Install
     inputs:
-      command: 'install'
+      command: 'install --force'
       workingDir: '$(Build.SourcesDirectory)'
 
   - task: Npm@1
