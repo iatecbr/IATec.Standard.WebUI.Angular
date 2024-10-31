@@ -17,6 +17,22 @@ variables:
   - group: nuget-credentials
 
 steps:
+  - task: Bash@3
+    displayName: 'Rename .npmrc.pipeline to .npmrc'
+    inputs:
+      targetType: 'inline'
+      script: 'mv .npmrc.pipeline .npmrc'
+
+  - task: replacetokens@6
+    displayName: 'Replace variables in .npmrc'
+    inputs:
+      targetFiles: '.npmrc'
+      encoding: 'auto'
+      writeBOM: true
+      actionOnMissing: 'warn'
+      keepToken: false
+      tokenPrefix: '#{'
+      tokenSuffix: '}#'
   - task: NodeTool@0
     displayName: 'Install Node.js'
     inputs:
@@ -27,14 +43,6 @@ steps:
     inputs:
       command: 'install'
       workingDir: '$(Build.SourcesDirectory)'
-
-  - task: CmdLine@2
-    displayName: Clear Files
-    inputs:
-      script: |
-        rm "public/environments/environment.js"
-        mv "public/environments/environment.prod.js" "public/environments/environment.js"
-      workingDirectory: '$(Build.SourcesDirectory)'
 
   - task: Npm@1
     displayName: Build
