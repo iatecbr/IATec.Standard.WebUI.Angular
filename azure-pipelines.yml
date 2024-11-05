@@ -43,6 +43,9 @@ steps:
     inputs:
       command: 'install'
       workingDir: '$(Build.SourcesDirectory)'
+    env:
+      NPM_CONFIG_FORCE: true
+      NPM_CONFIG_LEGACY_PEER_DEPS: true
 
   - task: Npm@1
     displayName: Build
