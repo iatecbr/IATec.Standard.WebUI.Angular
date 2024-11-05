@@ -56,6 +56,6 @@ steps:
 
   - task: PublishBuildArtifacts@1
     inputs:
-      PathtoPublish: 'dist/iatec.standard.web-ui.angular'
+      PathtoPublish: 'storybook-static'
       ArtifactName: 'files'
       publishLocation: 'Container'
