@@ -7,7 +7,7 @@ trigger: none
 
 resources:
   pipelines:
-    - pipeline: IATec.Standard.WebUI.Angular
+    - pipeline: IATec.Standard.WebUI.Angular.Storybook
       source: IATec.Standard.WebUI.Angular
       trigger:
         branches:
