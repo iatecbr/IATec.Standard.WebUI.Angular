@@ -32,8 +32,8 @@ steps:
     displayName: Clear Files
     inputs:
       script: |
-        rm "public/environments/environment.js"
-        mv "public/environments/environment.prod.js" "public/environments/environment.js"
+        rm "public/scripts/config.js"
+        mv "public/scripts/config.prod.js" "public/scripts/config.js"
       workingDirectory: '$(Build.SourcesDirectory)'
 
   - task: Npm@1

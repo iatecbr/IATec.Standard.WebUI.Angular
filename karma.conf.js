@@ -30,10 +30,9 @@ module.exports = function (config) {
             dir: require('path').join(__dirname, './coverage/angular-testing'),
             subdir: '.',
             reporters: [
-                { type: 'html' },
-                { type: 'text-summary' },
-                // --------------> Add the following line <--------------
-                { type: 'cobertura' }
+                {type: 'html'},
+                {type: 'text-summary'},
+                {type: 'cobertura'}
             ]
         },
         reporters: ['progress', 'kjhtml'],

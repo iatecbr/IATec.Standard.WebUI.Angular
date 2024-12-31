@@ -37,11 +37,11 @@ Consulte a documentação do [IATec Artefatos](https://dev.azure.com/sda-iatec/7
 
 ### Variáveis de Ambiente
 
-As variáveis de ambiente da template estão localizadas no arquivo [`src/environments/environment.ts`](src/environments/environment.ts). Porém, os valores são definidos nos arquivos [`public/environments/environment.js`](public/environments/environment.js) para desenvolvimento local e [`public/environments/environment.prod.js`](public/environments/environment.prod.js) para ambientes de produção, com substituição de variáveis.
+As variáveis de ambiente da template estão localizadas no arquivo [`src/environments/environment.ts`](src/environments/environment.ts). Porém, os valores são definidos nos arquivos [`public/environments/environment.js`](public/scripts/config.js) para desenvolvimento local e [`public/environments/environment.prod.js`](public/scripts/config.prod.js) para ambientes de produção, com substituição de variáveis.
 
-O arquivo [`public/environments/environment.js`](public/environments/environment.js) é carregado pelo arquivo [`public/index.html`](public/index.html) quando o projeto é iniciado. No arquivo [`src/environments/environment.ts`](src/environments/environment.ts) as variáveis são importadas através das variáveis `env['variavel']`.
+O arquivo [`public/environments/environment.js`](public/scripts/config.js) é carregado pelo arquivo [`public/index.html`](public/index.html) quando o projeto é iniciado. No arquivo [`src/environments/environment.ts`](src/environments/environment.ts) as variáveis são importadas através das variáveis `env['variavel']`.
 
-Para ambientes publicados, o arquivos [`public/environments/environment.prod.js`](public/environments/environment.prod.js) será renomeado para `environment.js` e substituído no build, as variaveis de ambiente devem ser substituídas na release do Azure DevOps.
+Para ambientes publicados, o arquivos [`public/environments/environment.prod.js`](public/scripts/config.prod.js) será renomeado para `environment.js` e substituído no build, as variaveis de ambiente devem ser substituídas na release do Azure DevOps.
 
 ### Configuração do Azure DevOps
 

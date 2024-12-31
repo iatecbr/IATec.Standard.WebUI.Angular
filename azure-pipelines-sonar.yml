@@ -18,7 +18,27 @@ pool:
   name: IATec-Builds-Agents-Linux
   demands: java
 
+variables:
+  - group: nuget-credentials
+
 steps:
+  - task: Bash@3
+    displayName: 'Rename .npmrc.pipeline to .npmrc'
+    inputs:
+      targetType: 'inline'
+      script: 'mv .npmrc.pipeline .npmrc'
+
+  - task: replacetokens@6
+    displayName: 'Replace variables in .npmrc'
+    inputs:
+      targetFiles: '.npmrc'
+      encoding: 'auto'
+      writeBOM: true
+      actionOnMissing: 'warn'
+      keepToken: false
+      tokenPrefix: '#{'
+      tokenSuffix: '}#'
+
   - task: NodeTool@0
     displayName: 'Install Node.js'
     inputs:
@@ -44,21 +64,26 @@ steps:
       customCommand: 'run test-headless'
     continueOnError: true
 
-  - task: SonarQubePrepare@6
+  - task: SonarQubePrepare@7
     displayName: 'Prepare analysis on SonarQube'
     inputs:
-      SonarQube: 'IATec - 7You'
+      SonarQube: 'IATec.Core.Logs Connection'
       scannerMode: 'CLI'
       configMode: 'manual'
       cliProjectKey: 'IATec.Standard.WebUI.Angular'
       cliProjectName: 'IATec.Standard.WebUI.Angular'
       cliSources: '.'
+      extraProperties: |
+        sonar.projectBaseDir=$(System.DefaultWorkingDirectory)/
+        sonar.javascript.lcov.reportPaths=$(Build.SourcesDirectory)/coverage/lcov.info
 
-  - task: SonarQubeAnalyze@6
+  - task: SonarQubeAnalyze@7
     displayName: 'Run Code Analysis'
 
-  - task: SonarQubePublish@6
+  - task: SonarQubePublish@7
     displayName: 'Publish Quality Gate Result'
+    inputs:
+      pollingTimeoutSec: '300'
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results'
