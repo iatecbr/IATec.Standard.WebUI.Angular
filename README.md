@@ -18,7 +18,7 @@ Esta template consome pacotes privados do Artefatos no azure devops do IATec, po
 
 ***Não compartilhe ou envie o arquivo ao repositório git, cada desenvolvedor deve configurar as suas credências.***
 
-Consulte a documentação do [IATec Artefatos](https://dev.azure.com/sda-iatec/7You/_artifacts/feed/IATec.Community/connect) e escolha npm para mais informações. Caso não tenha acesso, solicite ao time de arquitetura da IATec.
+Consulte a documentação do [IATec Artefatos](https://dev.azure.com/sda-iatec/IATec.Services/_artifacts/feed/IATec.Community/connect) e escolha npm para mais informações. Caso não tenha acesso, solicite ao time de arquitetura da IATec.
 
 ### O que alterar?
 
