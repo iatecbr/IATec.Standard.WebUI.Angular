@@ -75,3 +75,21 @@ Caso ainda tenha dúvidas, consulte a documentação do [IATec Nephos](#) ou pro
 ## Contribuições
 
 Sinta-se à vontade para contribuir com o template, abrindo uma issue ou enviando um pull request.
+
+# Updates
+## Angular 17 to 19
+- [x] Criar o arquivo `tailwind.config.js`.
+- [x] Instalar o pacotes `@primeng/themes`, `primeclt`, `tailwindcss@3.4.17 --save-dev`, `postcss --save-dev`
+- [x] Reeimportar os estilos  no `src/styles.css`.
+- [x] Remover do arquivo index.html o link para o arquivo de layout com tema.
+- [x] Adicionar o link para a font `Lato` no arquivo index.html.
+- [x] Configurar o provider para o layout no `app.config.ts`.
+- [x] Configurar o parametros to tema Nephos na template `src/app/templates/main-template/component/main-template.component.ts`
+- [x]Customizar o tema no arquivo `styles.scss` usendo :root e variáveis css.
+```scss
+  :root {
+    --color-primary: #007bff;
+    ect...
+  }
+  ```
+- [x] Ao buildar o projeto, ignorar os warnings de css.

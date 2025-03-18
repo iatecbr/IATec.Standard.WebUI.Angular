@@ -4,7 +4,6 @@ import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
     selector: 'app-example',
-    standalone: true,
     imports: [
         EmptyPageComponent,
         TranslocoPipe

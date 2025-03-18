@@ -1,20 +1,27 @@
-import { Component, effect } from '@angular/core';
-import { LayoutService, NephosLayoutModule } from '@iatec/nephos-layout';
+import { Component, effect, inject } from '@angular/core';
+import {
+    LayoutService,
+    ProfileSidebarBlockComponent,
+    ProfileSidebarBlockItemComponent,
+    ProfileSidebarBlockSubtitleComponent,
+    ProfileSidebarBlockTitleComponent
+} from '@iatec/nephos-layout';
 
 @Component({
     selector: 'app-main-template-profile-sidebar',
-    standalone: true,
     imports: [
-        NephosLayoutModule
+        ProfileSidebarBlockComponent,
+        ProfileSidebarBlockItemComponent,
+        ProfileSidebarBlockTitleComponent,
+        ProfileSidebarBlockSubtitleComponent
     ],
     templateUrl: './profile-sidebar.component.html'
 })
 export class ProfileSidebarComponent {
+    private _layoutService = inject(LayoutService);
     name: string | undefined;
 
-    constructor(
-        private _layoutService: LayoutService
-    ) {
+    constructor() {
         effect(() => {
             const profile = this._layoutService.profile();
             this.name = profile.name;

@@ -1,8 +1,12 @@
-/* Layout */
-@import "../node_modules/@iatec/nephos-layout/lib/layout/styles/layout/layout.scss";
+/* Layout Nephos*/
+@use "@iatec/nephos-layout/lib/layout/tailwind.css";
+@use "@iatec/nephos-layout/lib/layout/layout.scss";
 
 /* PrimeNG */
-@import "primeng/resources/primeng.min.css";
-@import "primeflex/primeflex.scss";
-@import "primeicons/primeicons.css";
+@use "primeflex/primeflex.scss";
+@use "primeicons/primeicons.css";
+
 /* You can add global styles to this file, and also import other style files */
+:root{
+  //--primary-color: #b80eb5;
+}
