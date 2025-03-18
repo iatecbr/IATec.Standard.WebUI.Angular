@@ -85,11 +85,12 @@ Sinta-se à vontade para contribuir com o template, abrindo uma issue ou enviand
 - [x] Adicionar o link para a font `Lato` no arquivo index.html.
 - [x] Configurar o provider para o layout no `app.config.ts`.
 - [x] Configurar o parametros to tema Nephos na template `src/app/templates/main-template/component/main-template.component.ts`
-- [x]Customizar o tema no arquivo `styles.scss` usendo :root e variáveis css.
+- [x] Customizar o tema no arquivo `styles.scss` usendo :root e variáveis css.
 ```scss
   :root {
     --color-primary: #007bff;
     ect...
   }
   ```
+- [x] Reeimportar os components do Nephos, visto que os components agora são standalone.
 - [x] Ao buildar o projeto, ignorar os warnings de css.
