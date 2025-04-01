@@ -5,7 +5,7 @@ const version: string = require('../../package.json').version;
 let env = (window as { [key: string]: any })['env'];
 
 // Variables
-export const environment = {
+export const appEnvironment = {
     appVersion: version,
     environment: env['environment']
 };
