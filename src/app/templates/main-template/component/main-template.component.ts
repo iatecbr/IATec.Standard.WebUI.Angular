@@ -21,7 +21,8 @@ export class MainTemplateComponent implements OnInit {
         this._layoutService.layoutConfig.update(
             (config) => ({
                 ...config,
-                menuMode: 'slim'
+                primary: 'indigo',
+                menuMode: 'static',
             }));
 
         this._layoutService.profile.set({name: 'Apostle Paul', urlAvatar: './images/avatar/example.png'});
