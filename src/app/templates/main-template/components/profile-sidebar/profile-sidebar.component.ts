@@ -1,4 +1,4 @@
-import { Component, effect, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
     LayoutService,
     ProfileSidebarBlockComponent,
@@ -18,15 +18,7 @@ import {
     templateUrl: './profile-sidebar.component.html'
 })
 export class ProfileSidebarComponent {
-    private _layoutService = inject(LayoutService);
-    name: string | undefined;
-
-    constructor() {
-        effect(() => {
-            const profile = this._layoutService.profile();
-            this.name = profile.name;
-        });
-    }
+    public layoutService = inject(LayoutService);
 
     onCommentClick() {
         console.log('Comment clicked');

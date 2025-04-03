@@ -1,6 +1,6 @@
 {
-  "name": "Nephos By IATec",
-  "short_name": "Nephos",
+  "name": "IATec Standard WebUI",
+  "short_name": "iatec.standard.webui",
   "scope": "/",
   "start_url": "/",
   "display": "standalone",
