@@ -12,8 +12,7 @@ import { ProfileSidebarComponent } from '../components/profile-sidebar/profile-s
         ProfileSidebarComponent,
         LayoutComponent
     ],
-    templateUrl: './main-template.component.html',
-    styleUrl: './main-template.component.scss'
+    templateUrl: './main-template.component.html'
 })
 export class MainTemplateComponent implements OnInit {
     private _layoutService = inject(LayoutService);

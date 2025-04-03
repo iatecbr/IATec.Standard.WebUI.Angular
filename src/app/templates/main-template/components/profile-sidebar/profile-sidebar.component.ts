@@ -10,10 +10,10 @@ import {
 @Component({
     selector: 'app-main-template-profile-sidebar',
     imports: [
-        ProfileSidebarBlockComponent,
-        ProfileSidebarBlockItemComponent,
         ProfileSidebarBlockTitleComponent,
-        ProfileSidebarBlockSubtitleComponent
+        ProfileSidebarBlockSubtitleComponent,
+        ProfileSidebarBlockItemComponent,
+        ProfileSidebarBlockComponent
     ],
     templateUrl: './profile-sidebar.component.html'
 })

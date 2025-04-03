@@ -20,12 +20,11 @@
     "@angular/platform-browser": "19.2.4",
     "@angular/platform-browser-dynamic": "19.2.4",
     "@angular/router": "19.2.4",
-    "@iatec/nephos-layout": "4.1.0",
+    "@iatec/nephos-layout": "4.3.0",
     "@iatec/nephos-pages": "4.0.1",
     "@jsverse/transloco": "7.6.1",
     "@primeng/themes": "^19.0.10",
     "primeclt": "^0.1.5",
-    "primeflex": "^4.0.0",
     "primeicons": "7.0.0",
     "primeng": "19.0.10",
     "rxjs": "7.8.2",
@@ -37,7 +36,7 @@
     "@angular-devkit/build-angular": "19.2.5",
     "@angular/cli": "19.2.5",
     "@angular/compiler-cli": "19.2.4",
-    "@tailwindcss/postcss": "4.1.0",
+    "@tailwindcss/postcss": "4.1.1",
     "@types/jasmine": "5.1.7",
     "autoprefixer": "^10.4.21",
     "jasmine-core": "5.6.0",
@@ -47,7 +46,7 @@
     "karma-jasmine": "5.1.0",
     "karma-jasmine-html-reporter": "2.1.0",
     "postcss": "^8.5.3",
-    "tailwindcss": "4.1.0",
+    "tailwindcss": "4.1.1",
     "typescript": "5.8.2"
   }
 }
