@@ -1,7 +1,10 @@
 <nph-pages-empty>
-    <ng-container title>{{ 'module.example.title' | transloco }}</ng-container>
-    <ng-container content>
+    <ng-template #title>
+        {{ 'module.example.title' | transloco }}
+    </ng-template>
+
+    <ng-template #content>
         <p>{{ 'module.example.content' | transloco }}
             applications.</p>
-    </ng-container>
+    </ng-template>
 </nph-pages-empty>

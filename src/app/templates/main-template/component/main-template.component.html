@@ -1,5 +1,13 @@
 <nph-layout>
-    <app-main-template-logo logo/>
-    <app-main-template-topbar topbar/>
-    <app-main-template-profile-sidebar profileSidebar/>
+    <ng-template #logo>
+        <app-main-template-logo/>
+    </ng-template>
+
+    <ng-template #topbar>
+        <app-main-template-topbar/>
+    </ng-template>
+
+    <ng-template #profileSidebar>
+        <app-main-template-profile-sidebar/>
+    </ng-template>
 </nph-layout>
