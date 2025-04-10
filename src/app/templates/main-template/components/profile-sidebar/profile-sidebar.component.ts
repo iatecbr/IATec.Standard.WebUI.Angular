@@ -5,9 +5,7 @@ import {
     ProfileSidebarBlockItemComponent,
     ProfileSidebarBlockSubtitleComponent,
     ProfileSidebarBlockTitleComponent,
-
 } from '@iatec/nephos-layout';
-import { Badge } from 'primeng/badge';
 
 @Component({
     selector: 'app-main-template-profile-sidebar',
@@ -15,8 +13,7 @@ import { Badge } from 'primeng/badge';
         ProfileSidebarBlockComponent,
         ProfileSidebarBlockItemComponent,
         ProfileSidebarBlockSubtitleComponent,
-        ProfileSidebarBlockTitleComponent,
-        Badge
+        ProfileSidebarBlockTitleComponent
     ],
     templateUrl: './profile-sidebar.component.html'
 })
