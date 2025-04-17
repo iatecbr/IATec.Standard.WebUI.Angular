@@ -20,7 +20,7 @@
     "@angular/platform-browser": "19.2.7",
     "@angular/platform-browser-dynamic": "19.2.7",
     "@angular/router": "19.2.7",
-    "@iatec/nephos-layout": "5.0.0-rc.1",
+    "@iatec/nephos-layout": "5.0.0",
     "@iatec/nephos-pages": "4.2.1-rc.1",
     "@jsverse/transloco": "7.6.1",
     "@primeng/themes": "19.1.0",
