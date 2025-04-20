@@ -20,11 +20,10 @@
     "@angular/platform-browser": "19.2.7",
     "@angular/platform-browser-dynamic": "19.2.7",
     "@angular/router": "19.2.7",
-    "@iatec/nephos-layout": "5.1.0-rc.0",
+    "@iatec/nephos-layout": "5.1.0",
     "@iatec/nephos-pages": "5.0.0",
     "@jsverse/transloco": "7.6.1",
     "@primeng/themes": "19.1.0",
-    "primeicons": "7.0.0",
     "primeng": "19.1.0",
     "rxjs": "7.8.2",
     "tailwindcss-primeui": "0.6.1",
@@ -45,7 +44,7 @@
     "karma-jasmine": "5.1.0",
     "karma-jasmine-html-reporter": "2.1.0",
     "postcss": "8.5.3",
-    "tailwindcss": "3.4.17",
+    "tailwindcss": "4.1.4",
     "typescript": "5.8.3"
   }
 }

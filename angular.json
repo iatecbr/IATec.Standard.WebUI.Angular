@@ -32,7 +32,6 @@
               }
             ],
             "styles": [
-              "node_modules/@iatec/nephos-layout/lib/styles.scss",
               "src/styles.scss"
             ],
             "scripts": []

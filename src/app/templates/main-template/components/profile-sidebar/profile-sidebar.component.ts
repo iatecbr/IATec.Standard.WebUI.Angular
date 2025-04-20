@@ -1,11 +1,19 @@
 import { Component, inject } from '@angular/core';
-import { LayoutService, } from '@iatec/nephos-layout';
-import { Badge } from 'primeng/badge';
+import {
+    LayoutService,
+    ProfileSidebarBlockComponent,
+    ProfileSidebarBlockItemComponent,
+    ProfileSidebarBlockSubtitleComponent,
+    ProfileSidebarBlockTitleComponent,
+} from '@iatec/nephos-layout';
 
 @Component({
     selector: 'app-main-template-profile-sidebar',
     imports: [
-        Badge
+        ProfileSidebarBlockComponent,
+        ProfileSidebarBlockItemComponent,
+        ProfileSidebarBlockSubtitleComponent,
+        ProfileSidebarBlockTitleComponent
     ],
     templateUrl: './profile-sidebar.component.html'
 })
