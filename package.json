@@ -24,6 +24,7 @@
     "@iatec/nephos-pages": "5.0.0",
     "@jsverse/transloco": "7.6.1",
     "@primeng/themes": "19.1.0",
+    "primeicons": "^7.0.0",
     "primeng": "19.1.0",
     "rxjs": "7.8.2",
     "tailwindcss-primeui": "0.6.1",
