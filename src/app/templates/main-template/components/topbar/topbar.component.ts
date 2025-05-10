@@ -33,6 +33,13 @@ export class TopbarComponent implements OnInit {
         this._getDependencies();
     }
 
+    public afterChangeLanguage(language: LanguageModel | undefined): void {
+        if (language) {
+            localStorage.setItem('lang', `${language.code}-${language.country.code}`);
+            this._translateService.setActiveLang(`${language.code}-${language.country.code}`);
+        }
+    }
+
     private _getDependencies() {
         forkJoin([
             this._httpMenuService.getMenus(),
@@ -57,13 +64,6 @@ export class TopbarComponent implements OnInit {
 
         if (this.selectedLanguage) {
             localStorage.setItem('lang', `${this.selectedLanguage.code}-${this.selectedLanguage.country.code}`);
-        }
-    }
-
-    public afterChangeLanguage(language: LanguageModel | undefined): void {
-        if (language) {
-            localStorage.setItem('lang', `${language.code}-${language.country.code}`);
-            this._translateService.setActiveLang(`${language.code}-${language.country.code}`);
         }
     }
 }

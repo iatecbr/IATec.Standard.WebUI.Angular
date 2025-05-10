@@ -8,7 +8,7 @@ import { TextareaModule } from 'primeng/textarea';
 
 @Component({
     selector: 'app-dashboard',
-    imports: [InputTextModule, FluidModule, ButtonModule, SelectModule, FormsModule,  TextareaModule],
+    imports: [InputTextModule, FluidModule, ButtonModule, SelectModule, FormsModule, TextareaModule],
     templateUrl: './dashboard.component.html',
     styleUrl: './dashboard.component.scss'
 })
