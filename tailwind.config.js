@@ -2,7 +2,9 @@
 import PrimeUI from 'tailwindcss-primeui';
 
 export default {
-    plugins: [PrimeUI],
+    plugins: [
+        PrimeUI
+    ],
     content: [
         "./node_modules/@iatec/nephos-layout/**/*.{html,js}",
         "./node_modules/@iatec/nephos-pages/**/*.{html,ts}",
