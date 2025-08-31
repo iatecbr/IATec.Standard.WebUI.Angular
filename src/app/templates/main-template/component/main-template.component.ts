@@ -23,6 +23,7 @@ export class MainTemplateComponent implements OnInit {
                 ...config,
                 primary: 'indigo',
                 menuMode: 'static',
+
             }));
 
         this._layoutService.profile.set({name: 'Apostle Paul', urlAvatar: './images/avatar/example.png'});
