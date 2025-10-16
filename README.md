@@ -155,3 +155,9 @@ Sinta-se à vontade para contribuir com o template, abrindo uma issue ou enviand
   `src/app/templates/main-template/component/main-template.component.html` e
   `src/app/modules/main/example/example.component.html`
 - [x] Ao buildar o projeto, ignorar os warnings de css.
+
+## Angular 19 to 20
+- [x] Simplificar as importações no arquivo `tailwind.config.js`.
+- [x] Trocar o a lib `@primeng/themes` por `@primeuix/themes`.
+- [x] Simplificar o tailwind.css.
+- [x] Certificar que tema Lara foi modificado po Aura.

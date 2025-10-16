@@ -7,7 +7,7 @@ import { provideTransloco } from '@jsverse/transloco';
 import { TranslocoHttpLoader } from './core/loaders';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { providePrimeNG } from 'primeng/config';
-import Aura from '@primeng/themes/aura';
+import Aura from '@primeuix/themes/aura';
 
 export const appConfig: ApplicationConfig = {
     providers: [
