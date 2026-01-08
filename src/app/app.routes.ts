@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './modules/main/dashboard/dashboard.component';
+import { DashboardComponent } from './features/main/dashboard/dashboard.component';
 import { MainTemplateComponent } from './templates/main-template/component/main-template.component';
-import { ExampleComponent } from './modules/main/example/example.component';
+import { ExampleComponent } from './features/main/example/example.component';
 
 export const routes: Routes = [
     {
