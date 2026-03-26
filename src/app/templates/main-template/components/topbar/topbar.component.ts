@@ -63,7 +63,9 @@ export class TopbarComponent implements OnInit {
             && x.country.code === lang?.split('-')[1]) || this.languages[0];
 
         if (this.selectedLanguage) {
-            localStorage.setItem('lang', `${this.selectedLanguage.code}-${this.selectedLanguage.country.code}`);
+            const resolvedLang = `${this.selectedLanguage.code}-${this.selectedLanguage.country.code}`;
+            localStorage.setItem('lang', resolvedLang);
+            this._translateService.setActiveLang(resolvedLang);
         }
     }
 }
